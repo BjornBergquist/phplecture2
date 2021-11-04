@@ -109,3 +109,49 @@ switch ($type){
         echo 'style="background:lightblue"';
 }
 echo ">Click Me!</button><br>";
+
+$i = 0;
+echo "While i: ";
+while($i < 10){
+    echo $i . ' ';
+    $i++;
+}
+echo "<br>";
+
+$j = 0;
+echo "Do-while j: ";
+do{
+    echo $j . ' ';
+    $j++; 
+} while ($j < 10);
+echo "<br>";
+
+echo "For k: ";
+for($k = 0; $k<10; $k++){
+    echo $k . ' ';
+}
+echo "<br>";
+
+echo '<ol>';
+foreach($fruits as $fruit){
+    echo "<li>$fruit</li>";
+}
+echo '</ol>';
+
+foreach($fruits as $i => $fruit){
+    echo $i . ": " . $fruit . "<br>";
+}
+echo "<br>";
+
+$hobbies = [
+    'Björn' => ['Fencing', 'Gaming', 'Programming'],
+    'Ana' => 'Painting'
+];
+
+foreach($hobbies as $key => $value){
+    if (is_array($value)){
+        echo $key . ": " . implode(', ', $value). "<br>";
+    } else {
+        echo $key . ": " . $value . "<br>";
+    }
+}
