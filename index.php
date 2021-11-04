@@ -155,3 +155,29 @@ foreach($hobbies as $key => $value){
         echo $key . ": " . $value . "<br>";
     }
 }
+
+function hello(){
+    echo "Hello!<br>";
+}
+
+hello();
+
+// function sum($num1, $num2){
+//     return $num1 + $num2;
+// }
+
+$sum = fn($num1, $num2) => $num1 + $num2; 
+
+echo $sum(1,2) . "<br>";
+
+function create_button($title, $bgcolor, $color){
+    echo "<button style='
+            background:$bgcolor; 
+            color:$color'
+        >
+            $title
+        </button>";
+}
+
+create_button("Error", "red","white");
+create_button("Click me", "lightblue","black");
