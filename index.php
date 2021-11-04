@@ -71,3 +71,41 @@ $hobbies = [
 
 echo $hobbies['Björn'] . "<br>";
 
+$content = "En lång mening med massor av vettig information till användaren.";
+
+if(isset($content)):?>
+    <p><?php echo $content ?></p>
+<?php else:?>
+    <p>This page lacks content</p>
+<?php endif;
+
+$age = 10; 
+if ($age == 10){
+    echo "You're ten years old<br>";
+} elseif ($age >= 18){
+    echo "You are legally an adult<br>";
+} else {
+    echo "You're still a kid<br>";
+}
+
+echo $age >= 18 
+    ? "You're able to vote<br>" 
+    : "You have to wait to be able to vote<br>";
+
+//$name = null;
+
+//$user = isset($name) ? $name : 'John Doe'; 
+$user = $name ?? 'John Doe';
+echo $user . "<br>";
+
+$type = "warning";
+echo "<button ";
+switch ($type){
+    case 'error':
+        echo  'style="background:red"';
+    case 'warning':
+        echo  'style="background:orange"';
+    default: 
+        echo 'style="background:lightblue"';
+}
+echo ">Click Me!</button><br>";
